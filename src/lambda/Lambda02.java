@@ -58,7 +58,7 @@ public class Lambda02 {
 	}
 
 	
-	// MOCK WORDS
+	// MOCK COURSES
 	public static List<Course> mockListCourses() {
 		List<Course> c = new ArrayList<>();
 		c.add(new Course("Python", 45));
