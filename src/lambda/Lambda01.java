@@ -84,7 +84,7 @@ public class Lambda01 {
 		//ANOTATIONS AND EXAMPLES
 		// Give String and Return Integer
 		Function<String, Integer> function = String::length;
-		Function<String, Integer> function2 = s -> s.length();
+		//Function<String, Integer> function2 = s -> s.length();
 		
 		// Create comparator
 		Comparator<String> comparator = Comparator.comparing(function);
