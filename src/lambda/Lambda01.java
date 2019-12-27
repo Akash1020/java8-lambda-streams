@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class Lambda01 {
 
@@ -54,6 +55,42 @@ public class Lambda01 {
 		
 		//NOT COMPILE, BECAUSE 'OBJECT' NOT IS INTERFACE FUNCTIONAL
 		//Object o = s -> System.out.println(s);
+		
+		
+		
+		
+		System.out.println();
+		System.out.println();
+		System.out.println("--------------------------------------------");
+		System.out.println();
+		System.out.println();
+		
+		
+		
+		
+		System.out.println("->>> USING LAMBDA WITH METHOD REFERENCES");
+		System.out.println();
+		// USING LAMBDA
+		// 1. print default with forEach with method references
+		words.forEach(System.out::println);
+		
+		// 2. using comparator with method references
+		words.sort(Comparator.comparing(String::length));
+		
+		
+		
+		
+		
+		//ANOTATIONS AND EXAMPLES
+		// Give String and Return Integer
+		Function<String, Integer> function = String::length;
+		Function<String, Integer> function2 = s -> s.length();
+		
+		// Create comparator
+		Comparator<String> comparator = Comparator.comparing(function);
+		
+		//Add sort
+		words.sort(comparator);
 	}
 	
 	
